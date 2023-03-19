@@ -44,6 +44,6 @@ And finally, wouldn't it be nice to have an app or pretty front-end to make all 
 ```
 ├── data
 ├── images
-├── Recommendation_Engine_Notebook.ipynb
-└── README.md
+├── README.md
+└── Recommendation_Engine_Notebook.ipynb
 ```
