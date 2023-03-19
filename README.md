@@ -1,6 +1,6 @@
 # Book-Recommendation-Engine
 
-<img src="images/CustomerSerivce.gif" width="750" align="center">
+<img src="images/SwordInTheStone.gif" width="750" align="center">
 
 ## Business Problem
 
