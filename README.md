@@ -26,9 +26,9 @@ Exploratory data analysis finds that reader ratings average between 3.5-4.5 out 
 
 It works pretty well!
 
-<img src="images/bookrec1" width="750" align="center">
-<img src="images/bookrec2" width="750" align="center">
-<img src="images/bookrec3" width="750" align="center">
+<img src="images/bookrec1.png" width="750" align="center">
+<img src="images/bookrec2.png" width="750" align="center">
+<img src="images/bookrec3.png" width="750" align="center">
 
 ## Conclusion & Next Steps
 
