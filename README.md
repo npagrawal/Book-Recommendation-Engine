@@ -8,9 +8,9 @@ The worst thing is finishing a book and not knowing what to read next! That's wh
 
 ## Overview
 
-The data comes from Kaggle. I used a K Nearest Neighbors using ball tree due to the amount of rows (nearly 29k) and columns (about 120). 
+The data comes from Kaggle. I first used a K Nearest Neighbors using ball tree due to the amount of rows (nearly 29k) and columns (about 120). Following this, I made a bag of words with all text data and used Natural Language Processing to create an even smarter recommender. I tried both Count Vectorizer and TF-IDF. Count Vectorizer gave better suggestions.
 
-Overall the recommendations the engine gives are pretty good, but could be improved with more and more recent book releases.
+Overall the recommendations the engine gives are pretty good, but could be improved with more data and more recent book releases.
 
 ## Data Understanding
 
@@ -26,9 +26,8 @@ Exploratory data analysis finds that reader ratings average between 3.5-4.5 out 
 
 It works pretty well!
 
-<img src="images/bookrec1.png" width="750" align="center">
-<img src="images/bookrec2.png" width="750" align="center">
-<img src="images/bookrec3.png" width="750" align="center">
+<img src="images/vibesrec1.png" width="750" align="center">
+<img src="images/vibesrec2.png" width="750" align="center">
 
 ## Conclusion & Next Steps
 
