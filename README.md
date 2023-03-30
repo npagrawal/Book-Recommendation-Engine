@@ -33,10 +33,8 @@ It works pretty well!
 
 In the end, the book recommendation engine gives you some pretty good suggestions for the books you put in. But there are still a few kinks to work out:
 
-- Sometimes the recommendation engine gives you the whole series as a suggestion or a re-issue, this seems a bit obvious. We can clean up the dataset further to remove box sets or re-issues.
 - Despite the size of the dataset (29k at the end of cleaning), there are still a lot of books that this system doesn't have. We can update it with more recent book releases, especially modern classics and bestsellers.
 - It'd be nice to know what genres the recommendations are falling into to give the user more to explore. We can add to the for loop to allow for this.
-And finally, wouldn't it be nice to have an app or pretty front-end to make all of this more accessible for users? That's coming right up!
 
 
 ## Repository Structure
