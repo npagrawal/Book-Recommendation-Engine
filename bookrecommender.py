@@ -10,7 +10,7 @@ from sklearn import neighbors
 # Load the data
 features = pd.read_csv("data/countvec_df2.csv")
 df = pd.read_csv("data/titles.csv")
-df = df.sort_values(["title"], ascending=(True))
+df = df.sort_values(["author", "title"], ascending=(True, True))
 
 # fit KNN model
 model = neighbors.NearestNeighbors(n_neighbors=6, algorithm='ball_tree')
