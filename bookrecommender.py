@@ -9,14 +9,14 @@ from sklearn import neighbors
 from sklearn.feature_extraction.text import CountVectorizer
 
 # Load the data
-df = pd.read_csv("data/titles.csv")
+df = pd.read_csv("data/bagofwords.csv")
 df = df.sort_values(["author", "title"], ascending=(True, True))
 
 indices = pd.Series(df["title"])
 
 # fit and transform dataframe with count vectorizer
 vec = CountVectorizer(min_df = 0.06, max_df = 0.95)
-count_matrix = vec.fit_transform(df_bagofwords["bagofwords"])
+count_matrix = vec.fit_transform(df["bagofwords"])
 cosine_sim = cosine_similarity(count_matrix, count_matrix)
 
 # define function
