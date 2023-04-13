@@ -6,16 +6,18 @@ import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.cluster import KMeans
 from sklearn import neighbors
+from sklearn.feature_extraction.text import CountVectorizer
 
 # Load the data
-features = pd.read_csv("data/countvec_df2.csv")
 df = pd.read_csv("data/titles.csv")
 df = df.sort_values(["author", "title"], ascending=(True, True))
 
-# fit KNN model
-model = neighbors.NearestNeighbors(n_neighbors=6, algorithm='ball_tree')
-model.fit(features)
-dist, idlist = model.kneighbors(features)
+indices = pd.Series(df["title"])
+
+# fit and transform dataframe with count vectorizer
+vec = CountVectorizer(min_df = 0.06, max_df = 0.95)
+count_matrix = vec.fit_transform(df_bagofwords["bagofwords"])
+cosine_sim = cosine_similarity(count_matrix, count_matrix)
 
 # define function
 def VibesBookRecommender(book_name, cosine_sim = cosine_sim):
@@ -25,8 +27,8 @@ def VibesBookRecommender(book_name, cosine_sim = cosine_sim):
     top_5_indices = list(score_series.iloc[1:6].index)
     
     for i in top_5_indices:
-        titles = list(df_bagofwords["title"])[i]
-        authors = list(df_bagofwords["author"])[i]
+        titles = list(df["title"])[i]
+        authors = list(df["author"])[i]
         recommended_books.append(f"{titles} by {authors}")
         
     return recommended_books  
